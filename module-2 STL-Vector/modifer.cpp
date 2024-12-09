@@ -10,6 +10,7 @@ int main()
     v2.push_back(12);
     v2.pop_back();
     v2.pop_back();
+    v2.insert(v2.begin()+2,60);
     for(int x:v2)
     {
         cout<<x<<" ";
