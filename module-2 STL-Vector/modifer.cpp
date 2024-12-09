@@ -7,7 +7,9 @@ int main()
     //assign new vector
     vector<int>v2;
     v2 = v;
-
+    v2.push_back(12);
+    v2.pop_back();
+    v2.pop_back();
     for(int x:v2)
     {
         cout<<x<<" ";
