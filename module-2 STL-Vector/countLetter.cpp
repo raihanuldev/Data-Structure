@@ -8,14 +8,15 @@ int main()
     
     int len = s.size();
 
-    for(int i=0; i<len;i++){
+    for(int i=0; i<len;i++){    // o(N)
         int index = s[i]-'a';
         v[index]+=1;
-    }
-    for(int i =0; i<26; i++){
+    }   
+    for(int i =0; i<26; i++){ // o(N)
         if(v[i]>0){
             cout<< char('a'+i)<<" : " << v[i]<< endl;
         }
     }
+    // Time complexity => o(N)
     return 0;
 }

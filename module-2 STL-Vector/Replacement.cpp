@@ -5,7 +5,7 @@ int main()
 {
     int n; cin>>n;
     vector<int>v(n);
-    for(int i =0; i<n; i++){
+    for(int i =0; i<n; i++){ // o(N)
         int x; cin>>x;
         if(x==0){
             v[i]=x;
@@ -20,5 +20,6 @@ int main()
     {
         cout<<v[i]<<" ";
     }
+    //total time complexity => o(N)
     return 0;
 }

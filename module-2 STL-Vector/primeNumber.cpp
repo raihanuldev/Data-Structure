@@ -5,7 +5,7 @@ int main()
 {
     int tcase;
     cin >> tcase;
-    while (tcase--)
+    while (tcase--) //time complexity=> o(NlogN)
     {
         int n;
         cin >> n;
@@ -29,5 +29,6 @@ int main()
             cout << "NO" << endl;
         }
     }
+
     return 0;
 }
