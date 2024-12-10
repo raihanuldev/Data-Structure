@@ -15,7 +15,10 @@ int main()
         for(int i =l; i<=r; i++){
             sum+=a[i-1];
         }
+        
         cout<<sum<<endl;
     }
     return 0;
 }
+
+//here total time complexity O(n^2)
