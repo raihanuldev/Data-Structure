@@ -15,6 +15,10 @@ void inserting_at_tail(Node* &head,int val)
 {
     Node* newNode = new Node(val);
     Node* temp = head;
+    if(head==NULL){
+        head = newNode;
+        return;
+    }
     while(temp->next !=NULL){
         temp = temp->next;
     }
@@ -31,15 +35,16 @@ void printing_node(Node* head)
 }
 int main()
 {
-Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* b = new Node(30);
+Node* head = NULL;
+    // Node* a = new Node(20);
+    // Node* b = new Node(30);
     //connection
-    head->next = a;
-    a->next = b;
+    // head->next = a;
+    // a->next = b;
     //insert er pala
     inserting_at_tail(head,100);
-    inserting_at_tail(head,1200);
+    inserting_at_tail(head,200);
+    inserting_at_tail(head,300);
     printing_node(head);
     return 0;
 }
