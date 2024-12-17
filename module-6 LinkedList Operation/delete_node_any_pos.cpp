@@ -35,10 +35,14 @@ void printing_node(Node* head)
         temp = temp->next;
     }
 }
-void delete_head(Node* &head){
-    Node* deleteNode = head;
-    head = head->next;
-    delete deleteNode;
+void delete_any_pos(Node* &head,int idx){
+   Node* temp = head;
+   for(int i =1; i<idx;i++){
+        temp = temp->next;
+   }
+   Node* deleteNode = temp->next;
+   temp->next = deleteNode->next;
+   delete deleteNode;
 }
 int main()
 {
@@ -53,8 +57,8 @@ int main()
         }
         insert_at_tail(head,tail,val);
     }
-    delete_head(head);
-    delete_head(head);
+    delete_any_pos(head,2);
+    delete_any_pos(head,3);
     printing_node(head);
     return 0;
 }
