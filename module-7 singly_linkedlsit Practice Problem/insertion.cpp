@@ -22,6 +22,19 @@ void insert_node_tail(Node* &head,Node* &tail,int val){
     tail->next = newNode;
     tail = newNode;
 }
+void insert_any_pos(Node* head,int idx,int val)
+{
+    Node* newNode = new Node(val);
+    Node* temp = head;
+    for(int i =1; i<idx;i++){
+        temp = temp->next;
+    }
+    newNode->next = temp->next;
+    temp->next = newNode;
+    // cout<<temp->val;
+    
+}
+
 void printing_node(Node* head)
 {
     Node* temp = head;
@@ -43,6 +56,7 @@ int main()
         }
         insert_node_tail(head,tail,val);
     }
+    insert_any_pos(head,1,2444);
     printing_node(head);
     return 0;
 }
