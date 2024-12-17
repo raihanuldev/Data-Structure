@@ -28,15 +28,23 @@ void insert_node(Node* &head,Node* &tail,int val)
 void printing_node(Node* head){
     Node* temp = head;
     int count=0;
-    vector<int>arr();
+    int arr[101] = {0};
     while(temp!=NULL){
-        // cout<<temp->val<<endl;
-        temp = temp->next;
+        cout<<temp->val<<endl;
         
+        arr[temp->val]++;
+        temp = temp->next;
         count++;
 
     }
-    cout<<count<<endl;
+    for(int i=0; i<=100;i++){
+        if(arr[i]> 1){
+            cout<<"YES";
+            return;
+        }
+    }
+    cout<<"NO";
+    // cout<<count<<endl;
 }
 
 
