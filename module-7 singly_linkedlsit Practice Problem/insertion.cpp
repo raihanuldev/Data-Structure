@@ -41,8 +41,10 @@ void insert_any_pos(Node* head,Node* &tail,int idx,int val)
         cout<<"Invaild"<<endl;
         return;
     }
+    
     if(count ==idx){
         insert_node_tail(head,tail,val);
+        return;
     }
     for(int i =1; i<idx;i++){
         temp = temp->next;
