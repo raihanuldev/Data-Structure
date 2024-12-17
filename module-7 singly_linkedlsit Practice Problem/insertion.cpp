@@ -22,16 +22,33 @@ void insert_node_tail(Node* &head,Node* &tail,int val){
     tail->next = newNode;
     tail = newNode;
 }
-void insert_any_pos(Node* head,int idx,int val)
+int get_Size(Node* head){
+    Node* temp = head;
+    int count =0;
+    while(temp!=NULL)
+    {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+void insert_any_pos(Node* head,Node* &tail,int idx,int val)
 {
     Node* newNode = new Node(val);
     Node* temp = head;
+    int count = get_Size(temp);
+    if(count < idx){
+        cout<<"Invaild"<<endl;
+        return;
+    }
+    if(count ==idx){
+        insert_node_tail(head,tail,val);
+    }
     for(int i =1; i<idx;i++){
         temp = temp->next;
     }
     newNode->next = temp->next;
     temp->next = newNode;
-    // cout<<temp->val;
     
 }
 
@@ -40,9 +57,10 @@ void printing_node(Node* head)
     Node* temp = head;
     while(temp !=NULL)
     {
-        cout<<(*temp).val<<endl;
+        cout<<(*temp).val<<" ";
         temp = temp->next;
     }
+    cout<<endl;
 }
 int main()
 {
@@ -56,7 +74,19 @@ int main()
         }
         insert_node_tail(head,tail,val);
     }
-    insert_any_pos(head,1,2444);
-    printing_node(head);
+    int pos,elment;
+    while(true){
+        cin>>pos >>elment;
+        if(pos ==-1){
+            break;
+        }
+        insert_any_pos(head,tail,pos,elment);
+        printing_node(head);
+    }
+    // insert_any_pos(head,tail,1,40);
+    // insert_any_pos(head,tail,5,344);
+    // insert_any_pos(head,tail,4,344);
+    // insert_any_pos(head,tail,1,110);
+    
     return 0;
 }
