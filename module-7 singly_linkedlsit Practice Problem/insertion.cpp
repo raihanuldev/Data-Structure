@@ -35,8 +35,14 @@ int main()
 {
     Node* head =NULL;
     Node* tail = NULL;
-    insert_node_tail(head,tail,10);
-    insert_node_tail(head,tail,29);
+    int val;
+    while(true){
+        cin>>val;
+        if(val==-1){
+            break;;
+        }
+        insert_node_tail(head,tail,val);
+    }
     printing_node(head);
     return 0;
 }
