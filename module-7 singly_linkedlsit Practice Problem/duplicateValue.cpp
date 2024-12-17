@@ -28,11 +28,13 @@ void insert_node(Node* &head,Node* &tail,int val)
 void printing_node(Node* head){
     Node* temp = head;
     int count=0;
+    vector<int>arr();
     while(temp!=NULL){
         // cout<<temp->val<<endl;
         temp = temp->next;
-        count++;
         
+        count++;
+
     }
     cout<<count<<endl;
 }
