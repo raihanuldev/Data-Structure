@@ -16,7 +16,7 @@ void insert_at_head(Node*& head, Node*& tail, int val) {
     newNode->next = head;
     head = newNode;
     if (tail == NULL) {
-        tail = head; // If the list was empty, tail also points to the new head
+        tail = head;
     }
 }
 
@@ -25,7 +25,7 @@ void insert_tail(Node*& head, Node*& tail, int val) {
     if (head == NULL) {
         head = newNode;
         tail = newNode;
-        return; // Exit after initialization
+        return;
     }
     tail->next = newNode;
     tail = newNode;
@@ -44,12 +44,12 @@ int getSize(Node* head) {
 void remove_node_baseIndex(Node*& head, Node*& tail, int idx) {
     int listSize = getSize(head);
     if (idx < 0 || idx >= listSize) {
-        return; // Invalid index, do nothing
+        return; 
     }
-    if (idx == 0) { // Special case: Remove the head
+    if (idx == 0) { 
         Node* deleteNode = head;
         head = head->next;
-        if (head == NULL) { // If list becomes empty, reset tail
+        if (head == NULL) { 
             tail = NULL;
         }
         delete deleteNode;
@@ -61,14 +61,14 @@ void remove_node_baseIndex(Node*& head, Node*& tail, int idx) {
     }
     Node* deleteNode = temp->next;
     temp->next = deleteNode->next;
-    if (deleteNode->next == NULL) { // If the deleted node was the tail
+    if (deleteNode->next == NULL) { 
         tail = temp;
     }
     delete deleteNode;
 }
 
 void print_Node(Node* head) {
-    if (head == NULL) { // Handle empty list
+    if (head == NULL) {
         cout << endl;
         return;
     }
@@ -96,7 +96,7 @@ int main() {
         } else if (x == 2) {
             remove_node_baseIndex(head, tail, v);
         }
-        print_Node(head); // Print the list after each query
+        print_Node(head); 
     }
     return 0;
 }
