@@ -13,8 +13,13 @@ class Node
             this->prev = NULL;
         }
 };
-void insert_at_tail(Node* &tail,int val){
+void insert_at_tail(Node* &head,Node* &tail,int val){
     Node* newNode = new Node(val);
+    if(head==NULL){
+        head = newNode;
+        tail = newNode;
+        return;
+    }
     Node* temp = tail;
     tail->next = newNode;
     newNode->prev = tail;
@@ -35,14 +40,15 @@ int main()
     Node* head = new Node(10);
     Node* a = new Node(20);
     Node* tail = new Node(30);
-
+    // Node* head = NULL;
+    // Node* tail = NULL;
     //connection 
     head->next = a;
     a->prev = head;
     a->next = tail;
     tail->prev = a;
 
-    insert_at_tail(tail,5);
+    insert_at_tail(head,tail,5);
     printing_forward(head);
     
     return 0;
