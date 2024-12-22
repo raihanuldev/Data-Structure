@@ -26,11 +26,15 @@ void insert_at_tail(Node* &head,Node* &tail,int val){
     tail = newNode;
 }
 //delete from Head
-void delete_from_head(Node* &head)
+void delete_from_head(Node* &head,Node* &tail)
 {
     Node* deleteNode = head;
-    deleteNode->next->prev = NULL;
-    head = deleteNode->next;
+    head = head->next;
+    if(head==NULL){
+        tail = NULL;
+        return;
+    }
+    head->prev = NULL;
     delete deleteNode;
 }
 
@@ -56,8 +60,10 @@ int main()
     a->next = tail;
     tail->prev = a;
 
-    insert_at_tail(head,tail,5);
-    delete_from_head(head);
+    insert_at_tail(head,tail,11);
+    delete_from_head(head,tail);
+    delete_from_head(head,tail);
+    delete_from_head(head,tail);
     printing_forward(head);
     
     return 0;
