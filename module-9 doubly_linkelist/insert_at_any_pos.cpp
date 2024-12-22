@@ -37,7 +37,7 @@ void insert_any_pos(Node* &head,int idx,int val)
     newNode->next = temp->next;
     newNode->prev = temp;
     temp->next = newNode;
-    
+    temp->next->prev =newNode
 }
 
 void printing_forward(Node* head){
