@@ -37,7 +37,7 @@ void delete_from_tail(Node* &head,Node* &tail)
     tail->next = NULL;
     delete deleteNode;
 }
-
+//printing
 void printing_forward(Node* head){
     Node* temp = head;
     while(temp!=NULL){
