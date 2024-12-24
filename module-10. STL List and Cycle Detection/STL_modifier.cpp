@@ -13,6 +13,9 @@ int main()
     //insert at specific positon
     l2.insert(next(l2.begin(),2),16);
     l2.insert(next(l2.begin(),2),18);
+    //we can insert multiple val;
+    l2.insert(next(l2.begin(),2),{12,34,5});
+
     for(int val:l2){
         cout<<val<<endl;
     }
