@@ -16,6 +16,11 @@ int main()
     //we can insert multiple val;
     l2.insert(next(l2.begin(),2),{12,34,5});
 
+    //erase
+    l2.erase(next(l2.begin(),3));
+    l2.erase(next(l2.begin(),2));
+    l2.erase(next(l2.begin(),0));
+    
     for(int val:l2){
         cout<<val<<endl;
     }
