@@ -20,7 +20,9 @@ int main()
     l2.erase(next(l2.begin(),3));
     l2.erase(next(l2.begin(),2));
     l2.erase(next(l2.begin(),0));
-    
+    //replace;
+    replace(l2.begin(),l2.end(),30,300);
+    replace(l2.begin(),l2.end(),20,2000);
     for(int val:l2){
         cout<<val<<endl;
     }
