@@ -23,6 +23,13 @@ int main()
     //replace;
     replace(l2.begin(),l2.end(),30,300);
     replace(l2.begin(),l2.end(),20,2000);
+    //find the value
+    auto it = find(l2.begin(),l2.end(),222);
+    if(it==l2.end()){
+        cout<<"NOT Found";
+    }else{
+        cout<<"Found";
+    }
     for(int val:l2){
         cout<<val<<endl;
     }
