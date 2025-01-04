@@ -24,6 +24,17 @@ class myStack{
 
 int main()
 {
+    myStack st;
+    st.push(10);
+    st.push(30);
+    st.push(40);
+    st.push(50);
+    cout<<st.top()<<endl;
+    st.pop();
+    st.pop();
+    cout<<st.top()<<endl;
+    st.push(232);
+    cout<<st.top()<<endl;
 
     return 0;
 }
