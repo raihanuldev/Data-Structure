@@ -5,6 +5,9 @@ push(),
 size(),
  empty(),
 
+![alt text](image.png)
+
+
 ><><>
 Stack maintaing LIFO SYSTEM that's means Last in frist Out. 
 
