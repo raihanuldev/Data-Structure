@@ -19,4 +19,6 @@ ei j ekta site e gelam ota sobar top e thaklo erpor arekta site e gelam otao ekn
 stack e ahamori kichu na, eita array,linklist dia e kore shudu matro 5 thi opearation ghula hoile oitai stack hisahbe pore. that's it.
 
 * Stack e POP(),TOP() ei method use korar age check kore nite hobe eita empty kina! eita ekta corner case hisabe o dorte paro tumraa.
+  
+* Stack e only top value er access thake tumar jodi pura ta print korte mon chai tahole tumi top print kore remove kore diba then top hoye jabe arekta eibabe cholte thakbaa
 * 
