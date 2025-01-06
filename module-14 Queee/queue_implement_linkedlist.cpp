@@ -33,6 +33,7 @@ class myQueue
     }
     void pop()
     {
+         if (head == NULL) return;
         sz--;
         Node* tmp = head;
         head = head->next;
@@ -65,6 +66,10 @@ int main()
         int val;
         cin>>val;
         q.push(val);
+    }
+    while(!q.empty()){
+        cout<<q.front()<<endl;
+        q.pop();
     }
     cout<<q.front()<<" "<<q.back()<<" "<<q.size()<<endl;
     return 0;
