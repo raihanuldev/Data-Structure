@@ -1,3 +1,5 @@
-rakib 12 87 
-akib 13 89 
-sahel 17 96 
+hamim 2
+namim 2
+samim 2
+tamim 2
+Ache
